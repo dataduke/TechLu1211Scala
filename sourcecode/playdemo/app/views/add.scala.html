@@ -1,0 +1,22 @@
+@(form: Form[models.Person])(implicit r: RequestHeader, l: Lang)
+
+<html>
+<body>
+
+@if(r.session.get("counter").isDefined){ @r.session.get("counter").get }
+<br/>
+
+@if(form.hasGlobalErrors) {
+    @Messages(form.globalError.get.message)
+}
+
+@helper.form(action = routes.Application.submit) {
+    <input type="hidden" name="id" value="0"/>
+    @textField(form("givenname"))
+    @textField(form("surname"))
+    @textField(form("age"))
+    <input type="submit">
+}
+
+</body>
+</html>

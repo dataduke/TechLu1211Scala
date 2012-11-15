@@ -1,0 +1,17 @@
+@(persons: List[Person])
+
+<html>
+<body>
+<ul>
+    @for(p <- persons) {
+    <li>@p.givenname @p.surname (@p.age)</li>
+    }
+</ul>
+<a href="@routes.Application.add">Neuen Namen speichern</a>
+
+<p>
+    @Information.getMessage
+</p>
+
+</body>
+</html>
