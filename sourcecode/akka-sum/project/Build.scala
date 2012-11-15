@@ -7,7 +7,7 @@ object ProjectBuild extends Build {
     id = "root",
     base = file("."),
     settings = Project.defaultSettings ++ Seq(
-      name := "Akka Pi Calculation Tutorial In Scala",
+      name := "Akka Sum Calculation Tutorial In Scala",
       organization := "org.example",
       version := "0.1-SNAPSHOT",
       scalaVersion := "2.9.2",

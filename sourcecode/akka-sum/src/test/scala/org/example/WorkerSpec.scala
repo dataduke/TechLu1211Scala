@@ -17,7 +17,7 @@ class WorkerSpec extends WordSpec with MustMatchers with BeforeAndAfterAll {
   }
 
   "Worker" must {
-    "calculate pi correctly" in {
+    "calculate sum correctly" in {
       val testActor = TestActorRef[org.example.Sum.Worker]
       val actor = testActor.underlyingActor
       actor.calculate(0, 0) must equal(0)
