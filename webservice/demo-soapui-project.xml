@@ -188,8 +188,8 @@
 def holder = new com.eviware.soapui.support.XmlHolder( mockRequest.requestContent )
 
 // get arguments and sum
-def arg1 = Integer.parseInt( holder["//calc:x"].trim() )
-def arg2 = Integer.parseInt( holder["//calc:y"].trim() )
+def arg1 = Integer.parseInt( holder["//cal:x"] )
+def arg2 = Integer.parseInt( holder["//cal:y"] )
 
 requestContext.sum =  arg1 + arg2</con:script><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cal="http://www.parasoft.com/wsdl/calculator/">
    <soapenv:Header/>
